@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Indie+Flower|Open+Sans'); /* importacion de fuentes*/
+* {
+	/*Con esta instrucción se asegura que el padding y border estan incluidos en la altura y anchura total de los elementos*/
+    box-sizing: border-box;
+}
+ul,button,footer{
+	font-family: 'Open Sans', regular, sans-serif;
+}
+body{
+	background-color: white;
+	max-width: 960px;
+	margin-left:auto;
+    margin-right:auto;
+}
+header h1{
+	text-align: center;
+	font-family: 'Cookie', cursive;
+	font-size: 3em;
+}
+nav{
+	margin: 0;
+	padding: 0;
+}
+nav ul{
+	list-style-type: none;
+	display: -webkit-flex;
+	display: flex;
+}
+@media only screen and (min-width: 501px) {
+	nav ul{
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+	#advice_button{
+		width: 30%
+	}
+}
+@media only screen and (max-width: 500px) {
+	nav ul{
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	#advice_button{
+		width: 100%
+	}
+}
+nav ul li{
+	flex-grow: 1; /*El ancho de los elementos deben ser todos iguales*/
+	margin: 0.1em;
+	border: 0.1em solid black;
+	border-radius: 0.3em;
+}
+nav ul li a{
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding: 0.2em;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+nav ul li a:link,a:visited,a:active{
+	color:black;
+}
+nav ul li a:hover{
+	background-color: black;
+	color: white;
+}
+article{
+	text-align: center;/*con esto se logra que el texto y el boton que se ecuentran del del tag article estén centrados*/
+	background-image: url("../img/turtle_7.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+}
+#advice_text{
+	font-family: 'Indie Flower', cursive;
+	font-size: 2em;
+	text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.53);
+	
+}
+#advice_button{
+    background-color: white;
+    border: 0.1em solid black;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-size: 1em;
+	border-radius: 0.3em;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#advice_button:hover {
+    background-color: black;
+    color: white;
+}
+footer .box{
+	text-align: center;
+	/*position: fixed;
+	Width: 100%;
+	bottom: 0;*/
+}
+.box{
+	margin: 0.1em;
+	border: 0.1em solid black;
+	padding: 1em;
+	border-radius: 0.3em;
+}
+.no_margin_border_padding{
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
