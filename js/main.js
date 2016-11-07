@@ -1,4 +1,13 @@
 $(function(){
+    /*navbar*/
+    var flex_items = $(".flex-item");
+    var burger = $("#burger");
+    /*navbar*/
+
+    burger.click(function(){
+            flex_items.toggle(100);
+        }
+    );
 
     var getRandomIndex = function(){
         return Math.floor(Math.random()*(textos.length-1));
@@ -6,8 +15,8 @@ $(function(){
 
     var setRandomBackgroundImage = function(){
         //Inserta una imagen de fondo de forma aleatoria con cada recarga de la web
-        var backgroundTitle = "url\("+"img/turtle_"+(+Math.floor(Math.random()*7)+1)+".jpg\)";
-        $("article").css("background-image",backgroundTitle);
+        var backgroundTitle = "img/turtle_"+(+Math.floor(Math.random()*7)+1)+".jpg";
+        $("#turtle_image").attr("src", backgroundTitle);
     };
 
     //Inserta un consejo de forma aleatoria al pulsar el boton "Nuevo Consejo"
@@ -39,4 +48,5 @@ var textos = ["Encuentra la palmera adecuada, come mucha fruta entre las 9 y las
     "Dejad de poner frases en internet y decir que las he escrito yo. Albert Einstein",
     "Y los niños? Es que nadie piensa en los niños?!",
     "¡No hombre no!, Esos cadáveres no son de su familia, yo no soy un asesino. Con su permiso, me voy retirando con viento fresco. Besis",
-    "Qué es la vida, sino un breve lapsus en el tiempo, tremendamente improbable y tremendamente efímero? No te sorprendas con grandes cosas y asombrate por las cosas pequeñas, pues mientras más vives, menos sentido tendrá tu existencia (de mierda)"];
+    "Qué es la vida, sino un breve lapsus en el tiempo, tremendamente improbable y tremendamente efímero? No te sorprendas con grandes cosas y asombrate por las cosas pequeñas, pues mientras más vives, menos sentido tendrá tu existencia (de mierda)",
+    "Hay un oso invernal comiendo hojas de bambú que te va a matar plácidamente."];
