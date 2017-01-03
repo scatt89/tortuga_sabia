@@ -1,5 +1,8 @@
 <div>
   <img [src]="img_route" alt="Imagen tortuga"/>
-  <p>{{advice}}</p>
-  <button>{{button_text}}</button>
+
+  <p>&lt;&lt;<i>{{advice_text}}&gt;&gt;</i><br></p>
+  <p>{{advice_author}}</p>
+
+  <button (click)="newAdvice()">{{button_text}}</button>
 </div>
