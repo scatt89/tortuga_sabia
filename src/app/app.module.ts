@@ -9,6 +9,12 @@ import {MainComponent} from "./components/main/main.component";
 import {HeaderComponent} from "./components/header/header.component";
 
 import {AdviceService} from "./services/advice.service";
+import {ImageService} from "./services/image.service";
+
+/**
+ * Created by Marrarichy Da Silva Garcia on 3/01/17.
+ * E-mail: dasilvagarciam@gmail.com
+ */
 
 @NgModule({
   declarations: [
@@ -20,7 +26,7 @@ import {AdviceService} from "./services/advice.service";
     HttpModule,
     JsonpModule
   ],
-  providers: [AdviceService],
+  providers: [AdviceService,ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

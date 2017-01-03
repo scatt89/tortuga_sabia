@@ -4,6 +4,11 @@ import {Advice} from "../model/advice.model";
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 
+/**
+ * Created by Marrarichy Da Silva Garcia on 3/01/17.
+ * E-mail: dasilvagarciam@gmail.com
+ */
+
 const BASE_URL = "http://localhost:8080/frases";
 
 @Injectable()
