@@ -7,10 +7,9 @@ interface menuItem{
 
 @Component({
   selector: 'header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent{
   header_title: string = "La tortuga Sabia";
-  menu_list: menuItem[] = [{title:"Inicio",link:"#"}, {title:"Login",link:"#"}, {title:"Acerca de",link:"#"}, {title:"Contacto",link:"#"}];
+  menu_list: menuItem[] = [{title:"Inicio",link:"/home"}, {title:"Login",link:"login"}, {title:"Acerca de",link:"about"}, {title:"Contacto",link:"contact"}];
 }

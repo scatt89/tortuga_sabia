@@ -4,9 +4,9 @@ import {Component} from "@angular/core";
  * E-mail: dasilvagarciam@gmail.com
  */
 @Component({
-  selector: 'main',
-  templateUrl: 'main.component.html'
+  selector: 'contact',
+  templateUrl: 'contact.component.html'
 })
-export class MainComponent{
-
+export class ContactComponent{
+  email:string = "dasilvagarciam@gmail.com"
 }

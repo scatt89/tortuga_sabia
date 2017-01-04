@@ -1,6 +1,6 @@
 <div>
   <h1>{{header_title}}</h1>
   <ul>
-    <li *ngFor="let item of menu_list"><a [href]="item.link">{{item.title}}</a></li>
+    <li *ngFor="let item of menu_list"><a [routerLink]="item.link">{{item.title}}</a></li>
   </ul>
 </div>
