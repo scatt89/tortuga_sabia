@@ -1,6 +1,11 @@
-<div>
-  <h1>{{header_title}}</h1>
-  <ul>
-    <li *ngFor="let item of menu_list"><a [routerLink]="item.link">{{item.title}}</a></li>
+<nav class="nav" role="navigation" (window:resize)="onResize()">
+  <ul class="nav__ul">
+    <div class="nav__ul--firstRow">
+      <li class="nav__ul--firstRow__li--burger" [ngStyle]="getBurgerStyle()"><a class="nav__ul--firstRow__li--burger__a" (click)="toggleMenu()">&#9776;</a></li>
+      <li class="nav__ul--firstRow__li--title"><a class="nav__ul--firstRow__li--title__a">{{header_title}}</a></li>
+    </div>
+    <div class="nav__ul--secondRow">
+      <li class="nav__ul--secondRow__li" [ngStyle]="getMenuStyle()" *ngFor="let item of menu_list"><a class="nav__ul--secondRow__li__a" [routerLink]="item.link">{{item.title}}</a></li>
+    </div>
   </ul>
-</div>
+</nav>
