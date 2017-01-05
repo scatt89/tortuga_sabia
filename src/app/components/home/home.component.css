@@ -1,20 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Cookie|Indie+Flower|Open+Sans");
-/*Con esta instrucción se asegura que el padding y border estan incluidos en la altura y anchura total de los elementos*/
-* {
-  box-sizing: border-box;
-}
-.home{
-  /*con esto se logra que el texto y el boton que se ecuentran del del tag article estén centrados*/
-  text-align: center;
-  /* para que la imagen dentro del article solo se visualice dentro de este contenedor*/
-  overflow: hidden;
-  position: relative;
-  margin: 0.1em;
-  border: 0.1em solid black;
-  padding: 1em;
-  border-radius: 0.3em;
-}
 .home__img--turtle{
   position: absolute;
   /* posicion centrada y absoluta de la imagen respecto a su contenedor padre */

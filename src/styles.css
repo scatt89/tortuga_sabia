@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Cookie|Indie+Flower|Open+Sans");
+/*Con esta instrucción se asegura que el padding y border estan incluidos en la altura y anchura total de los elementos*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*Caja para los menús*/
+.box{
+  margin: 0.1em;
+  border: 0.1em solid black;
+  padding: 1em;
+  border-radius: 0.3em;
+  text-align: center;
+  /*lo que sobresalga de la caja se oculta*/
+  overflow: hidden;
+  position: relative;
+  font-family: 'Open Sans', regular, sans-serif;
+}
+/*Caja invisible con un comportamiento responsive*/
+.box--invisible{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.labelAndInputItem{
+  margin: 1em;
+  border: 0;
+  padding: 0;
+}
+.labelItem{
+  text-align: left;
+  width: 10em;
+}
+.inputItem{
+  width: 15em;
+  height: 2em;
+  padding: 1em;
+  border-radius: 0.3em;
+  border: 0.1em solid black;
+}
+.buttonItem{
+  background-color: white;
+  border: 0.1em solid black;
+  padding: 0 1em 0.1em 1em;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 0.3em;
+  transition-duration: 0.4s;
+  width: 7em;
+  height: 2em;
+}
+.buttonItem:hover {
+  background-color: black;
+  color: white;
+}
+@media only screen and (max-width: 500px){
+  .buttonItem, .labelItem, .inputItem{
+    width: 100%;
+    display: inline-block;
+  }
+  .labelAndInputItem{
+    width: 100%;
+    margin: 0 0 1em 0;
+  }
+}
