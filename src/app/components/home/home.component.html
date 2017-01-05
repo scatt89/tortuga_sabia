@@ -1,8 +1,8 @@
-<div>
-  <img [src]="img_route" alt="Imagen tortuga"/>
+<div class="home" role="main">
+  <img class="home__img--turtle" [src]="img_route" alt="Imagen tortuga"/>
 
-  <p>&lt;&lt;<i>{{advice.advice}}&gt;&gt;</i><br></p>
-  <p>{{advice.author}}</p>
+  <p class="home__p--advice">&lt;&lt;<i>{{advice.advice}}&gt;&gt;</i><br></p>
+  <p class="home__p--author">{{advice.author}}</p>
 
-  <button (click)="newAdvice();updateImage()">{{button_text}}</button>
+  <button class="home__button--newAdvice" (click)="newAdvice();updateImage()">{{button_text}}</button>
 </div>
