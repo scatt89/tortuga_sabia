@@ -16,6 +16,7 @@
   font-size: 2em;
   text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.53);
   margin-bottom: 0.1em;
+  word-wrap: break-word;
 }
 .home__button--newAdvice{
   background-color: white;
@@ -38,6 +39,10 @@
   text-align: right;
   font-family: 'Indie Flower';
   font-size: 1.2em;
+}
+.home__p--shareAdvice{
+  font-family: 'Indie Flower', regular, sans-serif;
+  font-size: 2em;
 }
 @media only screen and (max-width: 500px) {
   .home__button--newAdvice{

@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit{
   advice: Advice;
   button_text: string;
   img_route: string;
+  create_author: string;
+  create_advice: string;
 
   constructor(private adviceService:AdviceService, private imageService:ImageService){}
 
@@ -45,5 +47,12 @@ export class HomeComponent implements OnInit{
       error => console.log(error),
       () => console.log("Image done!")
     );
+  }
+
+  createAdvice(){
+    this.adviceService.addAdvice({"advice":this.create_advice, "author":this.create_author})
+      .then(advice => {
+        alert("Creado consejo : "+advice.id+" || "+advice.author+" || "+advice.advice);
+      });
   }
 }

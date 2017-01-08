@@ -5,4 +5,19 @@
   <p class="home__p--author">{{advice.author}}</p>
 
   <button class="home__button--newAdvice" (click)="newAdvice();updateImage()">{{button_text}}</button>
+
+  <p class="home__p--shareAdvice">¿Tienes algún consejo que compartir? !Adelante!<p>
+
+  <div class="box--invisible">
+    <div class="labelAndInputItem">
+      <label class="labelItem" for="author">Autor</label>
+      <input class="inputItem" type="text" id="author" required="true" [(ngModel)]="create_author"><br>
+    </div>
+    <div class="labelAndInputItem">
+      <label class="labelItem" for="advice">Consejo</label>
+      <input class="inputItem" type="text" id="advice" maxlength="500" required="true" [(ngModel)]="create_advice"> <br>
+    </div>
+    <input class="buttonItem" style="" type="submit" (click)="createAdvice()">
+  </div>
+
 </div>

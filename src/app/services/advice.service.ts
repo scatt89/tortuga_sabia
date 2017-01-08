@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Http,Response} from "@angular/http";
+import {Http, Response, Headers} from "@angular/http";
 import {Advice} from "../model/advice.model";
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -9,10 +9,12 @@ import 'rxjs/Rx';
  * E-mail: dasilvagarciam@gmail.com
  */
 
-const BASE_URL = "http://localhost:8080/frases";
-
+//const BASE_URL = "http://localhost:8080/frases";
+const BASE_URL = "https://sentences01.herokuapp.com/sentences";
 @Injectable()
 export class AdviceService{
+
+  private headers = new Headers({'Content-Type': 'application/json'});
 
   constructor(private http:Http){
   }
@@ -26,6 +28,14 @@ export class AdviceService{
   getAdvice():Observable<Advice>{
     return this.http.get(BASE_URL+'/random')
       .map((response: Response) => response.json())
+      .catch(error => this.handleError(error));
+  }
+
+  addAdvice(advice: Advice): Promise<Advice>{
+    return this.http
+      .post(BASE_URL+'/newAdvice', JSON.stringify(advice), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json())
       .catch(error => this.handleError(error));
   }
 
